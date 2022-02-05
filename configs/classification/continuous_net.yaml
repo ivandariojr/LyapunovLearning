@@ -1,0 +1,15 @@
+# @package _global_
+defaults:
+  - module: ClassicalModule
+  - module/model: ContinuousNet
+  - default
+  - _self_
+module:
+  opt_name: Nero
+  weight_decay: 1e-4
+  lr: 1e-2
+max_epochs: 120
+batch_size: 128
+val_batch_size: 4096
+gpus: 1
+seed: 0

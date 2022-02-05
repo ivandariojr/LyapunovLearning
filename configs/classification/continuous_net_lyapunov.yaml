@@ -1,0 +1,16 @@
+# @package _global_
+defaults:
+  - module: ContinuousNetLyapunov
+  - module/model: ContinuousNet
+  - default
+  - _self_
+max_epochs: 120
+batch_size: 64
+val_batch_size: 4096
+gpus: 1
+seed: 0
+module:
+  opt_name: Nero
+  weight_decay: 1e-4
+  lr: 1e-2
+  order: 0

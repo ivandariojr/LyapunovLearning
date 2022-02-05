@@ -1,0 +1,34 @@
+# @package _global_
+defaults:
+  - module: ODEModule
+  - module/dynamics: ClassDyn
+  - module/output: Output
+  - module/init_fun: DefaultInitFun
+  - module/init_fun/param_map: RESNET18
+  - default
+  - _self_
+
+module:
+  train_ode_solver: rk4
+  train_ode_tol: 1e-1
+  val_ode_solver: rk4
+  val_ode_tol: 5e-2
+  opt_name: Nero
+  weight_decay: 1e-4
+  lr: 1e-2
+  dynamics:
+    activation: 'PReLU'
+    mlp_size: 128
+    n_param_features: 16384
+    gain: 1.0
+    restrict_to_simplex: False
+  init_fun:
+    param_map:
+      n_outputs: 16384
+  decay_epochs: [60]
+
+max_epochs: 120
+batch_size: 128
+val_batch_size: 4096
+gpus: 1
+seed: 0

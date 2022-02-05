@@ -1,0 +1,8 @@
+[submodule "libs/ContinuousNet"]
+	path = libs/ContinuousNet
+	url = git@github.com:ivandariojr/StatefulOdeNets.git
+	branch = lyanet-master
+
+[submodule "libs/nero"]
+	path = libs/nero
+	url = git@github.com:ivandariojr/nero.git

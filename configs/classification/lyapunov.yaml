@@ -1,0 +1,35 @@
+# @package _global_
+defaults:
+  - module: Lyapunov
+  - module/dynamics: ClassDyn
+  - module/output: Output
+  - module/init_fun: DefaultInitFun
+  - module/init_fun/param_map: RESNET18
+  - default
+  - _self_
+
+module:
+  train_ode_solver: dopri5
+  val_ode_solver: dopri5
+  val_ode_tol: 1e-3
+  opt_name: Nero
+  h_dist_lim: 15
+  weight_decay: 1e-4
+  h_sample_size: 512
+  lr: 1e-2
+  order: 1
+  dynamics:
+    activation: 'PReLU'
+    mlp_size: 128
+    n_param_features: 16384
+    gain: 100
+    restrict_to_simplex: False
+  init_fun:
+    param_map:
+      n_outputs: 16384
+  decay_epochs: [60]
+max_epochs: 120
+batch_size: 64
+val_batch_size: 4096
+gpus: 1
+seed: 0
