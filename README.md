@@ -1,6 +1,6 @@
 # LyaNet: A Lyapunov Framework for Training Neural ODEs
 
-This repository depends on a few submodule to clone either use ```git clone --recurse-submodules``` or use ```git submodule update --init --recursive``` after cloning.
+This repository depends on a few submodules. To clone either use ```git clone --recurse-submodules``` or use ```git submodule update --init --recursive``` after cloning.
 
 Provide the model type```--config-name``` to train and test models 
 configured as those shown in the paper. 
