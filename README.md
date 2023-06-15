@@ -11,7 +11,7 @@ clone --recurse-submodules``` or use ```git submodule update --init --recursive`
    environment.yaml```
 
 ## Classification Training
-For the code assumes the project root is the current directory.
+Scripts assume the project root is the current directory.
 
 Example commands:
 
