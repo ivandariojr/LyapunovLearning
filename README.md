@@ -1,9 +1,14 @@
 # LyaNet: A Lyapunov Framework for Training Neural ODEs
 
-This repository depends on a few submodules. To clone either use ```git clone --recurse-submodules``` or use ```git submodule update --init --recursive``` after cloning.
 
-Provide the model type```--config-name``` to train and test models 
-configured as those shown in the paper. 
+Provide the model type```--config-name``` to train and test models
+configured as those shown in the paper.
+
+## Setup
+1. This repository depends on a few submodules. To clone either use ```git 
+clone --recurse-submodules``` or use ```git submodule update --init --recursive``` after cloning.
+2. Install the requirements using conda by running ``` conda env create -f 
+   environment.yaml```
 
 ## Classification Training
 For the code assumes the project root is the current directory.
@@ -75,3 +80,4 @@ norm="inf"  +dataset=MNIST \
    [Code](https://github.com/afqueiruga/ContinuousNet)
 2. [Learning by Turning: Neural Architecture Aware Optimisation](https://arxiv.org/abs/2102.07227)
 [Code](https://github.com/jxbz/nero)
+3. [LyaNet: A Lyapunov framework for training neural ODEs](https://arxiv.org/abs/2202.02526)
